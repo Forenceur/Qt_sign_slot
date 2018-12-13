@@ -21,7 +21,7 @@ MyWin::MyWin(QWidget *parent) : QWidget(parent)
     QObject::connect(m_slider,SIGNAL(valueChanged(int)),m_lcd,SLOT(display(int)));
     QObject::connect(m_slider,SIGNAL(valueChanged(int)),m_progress,SLOT(setValue(int)));
 
-    QObject::connect(m_button,SIGNAL(clicked()),m_progress,SLOT(reset()));
+    //QObject::connect(m_button,SIGNAL(clicked()),m_progress,SLOT(reset()));
 }
 
 
