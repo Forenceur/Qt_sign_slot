@@ -7,14 +7,18 @@
 #include <QLCDNumber>
 #include <QPushButton>
 #include <QProgressBar>
+#define HAUTEUR 200
+#define LARGEUR 300
 
 class MyWin : public QWidget
 {
-private:
     Q_OBJECT
+
+private:
     QLCDNumber *m_lcd;
     QProgressBar *m_progress;
-    QSlider *m_slider;
+    QSlider *m_slider_w;
+    QSlider *m_slider_h;
     QPushButton *m_button;
 
 public:
@@ -22,8 +26,12 @@ public:
     ~MyWin();
 
 signals:
+    void agrandissementMax(int taille);
 
 public slots:
+    void changerLargeur(int largeur);
+    void changerHauteur(int hauteur);
+    void resetProgress(void);
 };
 
 #endif // MYWIN_H
